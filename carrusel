@@ -1,0 +1,14 @@
+// la parte del carrusel creando
+let carruselImagenes = ["banner-1.png", "banner-2.png", "banner-3.png", "banner-4.png"];
+let contadorCarrusel = 0;
+let imagenesCarrusel = document.getElementById("cambiarImagen");
+
+function cambiarImagen() {
+    imagenesCarrusel.src = "./images/" + carruselImagenes[contadorCarrusel];
+    contadorCarrusel++;
+    if (contadorCarrusel >= carruselImagenes.length) {
+        contadorCarrusel = 0;
+    }
+}
+
+setInterval(cambiarImagen, 1200);
